@@ -1,4 +1,4 @@
-var SlackWebhook = require('slack-webhook')
+var SlackWebhook = require('slack-webhook');
 var os = require('os');
 
 var slack = new SlackWebhook(process.env.SLACK_WEBHOOK_URL, {
@@ -20,7 +20,7 @@ streams.elasticsearch = require('pelias-dbclient');
 // default import pipeline
 streams.import = function(){
 
-  slack.send(`Starting NYCPAD Pelias Import on ${os.hostname()}`)
+  slack.send(`Starting NYCPAD Pelias Import on ${os.hostname()}`);
   var stream = streams.csvParser()
     .pipe( streams.docConstructor() )
     .pipe( streams.adminLookup() )
@@ -28,7 +28,7 @@ streams.import = function(){
     .pipe( streams.elasticsearch() );
 
   stream.on('finish', function () {
-    slack.send(`NYCPAD Pelias Import on ${os.hostname()} Finished!`)
+    slack.send(`NYCPAD Pelias Import on ${os.hostname()} Finished!`);
   });
 };
 
