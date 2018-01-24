@@ -3,3 +3,4 @@
 esclient.log
 *.log
 nohup.out
+.env

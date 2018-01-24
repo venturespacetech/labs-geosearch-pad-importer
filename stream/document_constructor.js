@@ -47,6 +47,9 @@ module.exports = function(){
       };
 
       doc.setMeta('bbl', item.bbl);
+      doc.setMeta('orig_stname', item.orig_stname);
+      doc.setMeta('pad_low', item.pad_low);
+      doc.setMeta('pad_high', item.pad_high);
 
       // Push instance of Document downstream
       this.push( doc );

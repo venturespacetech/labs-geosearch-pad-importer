@@ -1,6 +1,8 @@
 var SlackWebhook = require('slack-webhook');
 var os = require('os');
 
+require('dotenv').config();
+
 var slack = new SlackWebhook(process.env.SLACK_WEBHOOK_URL, {
   defaults: {
     username: 'GeoSearch Import Bot',

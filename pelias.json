@@ -8,18 +8,19 @@
     "nycpad": {
       "download": [
         {
-          "sourceURL": "https://planninglabs.nyc3.digitaloceanspaces.com/geosearch-data/labs-geosearch-pad-normalized.zip"
+          "sourceURL": "https://planninglabs.nyc3.digitaloceanspaces.com/geosearch-data/labs-geosearch-pad-normalized-sample-sm.zip"
         }
       ],
       "leveldbpath": "/tmp",
       "datapath": "data/nycpad",
       "import": [{
-          "filename":"labs-geosearch-pad-normalized.csv"
+          "filename":"labs-geosearch-pad-normalized-sample-sm.csv"
       }]
     },
     "services": {
       "pip": {
-        "url": "http://localhost:4200"
+        "url": "http://localhost:4200",
+        "timeout": 5000
       }
     }
   }
