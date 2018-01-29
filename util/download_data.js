@@ -1,5 +1,5 @@
 'use strict';
-require('dotenv').config()
+require('dotenv').config();
 
 const _ = require('lodash');
 const async = require('async');
