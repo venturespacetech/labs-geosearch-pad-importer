@@ -46,10 +46,12 @@ module.exports = function(){
         zip: item.zipcode
       };
 
-      doc.setMeta('bbl', item.bbl);
-      doc.setMeta('orig_stname', item.orig_stname);
-      doc.setMeta('pad_low', item.pad_low);
-      doc.setMeta('pad_high', item.pad_high);
+      // add custom metadata from original pad fields (prefixed 'pad_')
+      Object.keys(item)
+        .filter(d => d.indexOf('pad_') >= 0)
+        .forEach((key) => {
+          doc.setMeta(key, item[key]);
+        });
 
       // Push instance of Document downstream
       this.push( doc );
