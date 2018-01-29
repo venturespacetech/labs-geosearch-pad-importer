@@ -15,7 +15,7 @@ var streams = {};
 
 streams.csvParser = require('./csv_parser').create;
 streams.docConstructor = require('./document_constructor');
-streams.adminLookup = require('pelias-wof-admin-lookup').create;
+streams.adminLookup = require('./admin_lookup');
 streams.dbMapper = require('pelias-model').createDocumentMapperStream;
 streams.elasticsearch = require('pelias-dbclient');
 
