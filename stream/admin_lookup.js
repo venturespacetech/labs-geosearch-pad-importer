@@ -23,9 +23,8 @@ module.exports = function(){
     try {
       var doc = item;
 
-      // everything is in New York State
-      // doc.setAdmin( 'locality', 'New York' );
-
+      doc.addParent('country', 'United States', '85633793', 'USA');
+      doc.addParent('region', 'New York State', '0', 'NY');
       doc.addParent('locality', 'New York City', '0', 'NYC');
 
       // map borocode to borough and county properties
