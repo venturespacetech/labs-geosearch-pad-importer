@@ -25,7 +25,7 @@ module.exports = function(){
 
       doc.addParent('country', 'United States', '85633793', 'USA');
       doc.addParent('region', 'New York State', '0', 'NY');
-      doc.addParent('locality', 'New York City', '0', 'NYC');
+      doc.addParent('locality', 'New York', '0', 'NYC');
 
       // map borocode to borough and county properties
       var borocode = doc._meta.pad_bbl.charAt(0);
