@@ -10,7 +10,7 @@ streams.elasticsearch = require('pelias-dbclient');
 
 // default import pipeline
 streams.import = function(){
-  var stream = streams.csvParser()
+  streams.csvParser()
     .pipe( streams.docConstructor() )
     .pipe( streams.adminLookup() )
     .pipe( streams.dbMapper() )
